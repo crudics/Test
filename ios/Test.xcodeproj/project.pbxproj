@@ -15,7 +15,6 @@
 		7699B88040F8A987B510C191 /* libPods-Test-TestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Test-TestTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8B1C6370283F595200D31C3F /* license.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C636F283F595200D31C3F /* license.pem */; };
-		8B1C6377283F65AF00D31C3F /* libReactNativeIOSLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1C6376283F64BB00D31C3F /* libReactNativeIOSLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +24,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Test;
-		};
-		8B1C6375283F64BB00D31C3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B1C6371283F64BB00D31C3F /* ReactNativeIOSLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 182D01FA1DE565EC00E9B783;
-			remoteInfo = ReactNativeIOSLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,7 +45,6 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Test/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Test-TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-TestTests.release.xcconfig"; path = "Target Support Files/Pods-Test-TestTests/Pods-Test-TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B1C636F283F595200D31C3F /* license.pem */ = {isa = PBXFileReference; lastKnownFileType = file; name = license.pem; path = ../../../../../Downloads/allinfo/license.pem; sourceTree = "<group>"; };
-		8B1C6371283F64BB00D31C3F /* ReactNativeIOSLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeIOSLibrary.xcodeproj; path = "../node_modules/@ihealth/ihealthlibrary-react-native/ios/ReactNativeIOSLibrary.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -70,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1C6377283F65AF00D31C3F /* libReactNativeIOSLibrary.a in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-Test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +111,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				8B1C6371283F64BB00D31C3F /* ReactNativeIOSLibrary.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -147,14 +136,6 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Test.app */,
 				00E356EE1AD99517003FC87E /* TestTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8B1C6372283F64BB00D31C3F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8B1C6376283F64BB00D31C3F /* libReactNativeIOSLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,10 +226,6 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 8B1C6372283F64BB00D31C3F /* Products */;
-					ProjectRef = 8B1C6371283F64BB00D31C3F /* ReactNativeIOSLibrary.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -259,13 +236,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8B1C6376283F64BB00D31C3F /* libReactNativeIOSLibrary.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libReactNativeIOSLibrary.a;
-			remoteRef = 8B1C6375283F64BB00D31C3F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -489,6 +459,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -513,6 +486,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -539,6 +515,9 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -563,6 +542,9 @@
 				PRODUCT_NAME = Test;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
